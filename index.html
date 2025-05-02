@@ -1,13 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about my life</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulkit Janghu Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #6a11cb;
+      --secondary-color: #2575fc;
+      --hover-color: #ff6b81;
+      --text-light: #fff;
+      --bg-dark: #121212;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-dark) url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      color: var(--text-light);
+    }
+    header {
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin: 1rem 0;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      background: var(--hover-color);
+      transform: scale(1.05);
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 1rem auto;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      animation: slideIn 1s ease-in-out;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: #f8f8f8;
+    }
+    .skill-bar {
+      margin: 0.5rem 0;
+    }
+    .bar {
+      background: #333;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+      margin-top: 5px;
+    }
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      width: 0;
+      animation: growBar 2s ease-in-out forwards;
+    }
+    .contact-info a {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      color: var(--hover-color);
+    }
+    form input, form textarea {
+      padding: 12px;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+    }
+    form button {
+      padding: 12px;
+      background: var(--secondary-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: var(--hover-color);
+    }
+    @keyframes growBar {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+      section {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>pulkit picture</h1>
-    <img src="./26BBB89C-24FA-47E7-A425-C4B05D12DED8.png" width="200px" alt="">
-    
+  <header>
+    <h1><i class="fas fa-user"></i> Pulkit Janghu</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about"><i class="fas fa-user-circle"></i> About</a></li>
+      <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+      <li><a href="#projects"><i class="fas fa-tasks"></i> Projects</a></li>
+      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my colorful portfolio! I'm <strong>Pulkit Janghu</strong>.</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Passionate Computer Science Engineering student with a focus on web development and software engineering. I enjoy building applications and exploring new technologies.</p>
+    <p>I am currently pursuing my B.Tech in Computer Science Engineering and am passionate about creating efficient, user-friendly applications. I enjoy working on web development projects and am constantly learning new technologies to improve my skills.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-bar">
+      <p>Python</p>
+      <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+    </div>
+    <div class="skill-bar">
+      <p>C++</p>
+      <div class="bar"><div class="bar-fill" style="width: 75%;"></div></div>
+    </div>
+    <div class="skill-bar">
+      <p>HTML/CSS</p>
+      <div class="bar"><div class="bar-fill" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill-bar">
+      <p>JavaScript</p>
+      <div class="bar"><div class="bar-fill" style="width: 70%;"></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in Computer Science (AI & ML Specialization)</strong><br>
+        Dronacharya College of Engineering<br>
+        2024 - 2028</li>
+      <li><strong>12th Grade, PCM</strong><br>
+        Prince School<br>
+        2023 - 2024</li>
+      <li><strong>10th Grade</strong><br>
+        Delhi Public School<br>
+        2021 - 2022</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact-info"><i class="fas fa-phone"></i> Phone: 9205350681</p>
+    <p class="contact-info"><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/pulkit_janghu001" target="_blank">@pulkit_janghu001</a></p>
+
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage" style="margin-top:10px;"></p>
+  </section>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formMessage').textContent = "Thanks for reaching out, Pulkit will get back to you soon!";
+      this.reset();
+    });
+  </script>
 </body>
 </html>
